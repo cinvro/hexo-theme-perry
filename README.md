@@ -5,6 +5,13 @@ A theme for **[hexo][hexo]**, forked from Hexo default [light][light] theme.
 
 [theme demo][demo] 
 
+
+
+
+
+![pic][pic]
+
+
 *Note:*
 
 Due to the subdirectory bug of Hexo, the *archive* page of this theme cannot be reached in the demo site. Click [here][archive]
@@ -35,4 +42,4 @@ git pull
 [light]: https://github.com/tommy351/hexo-theme-light
 [demo]: http://cinvro.com/perry-demo/
 [archive]: http://cinvro.com/perry-demo/archives
-
+[pic]: http://cinvro.com/pic/perry.png
