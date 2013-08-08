@@ -1,7 +1,7 @@
 hexo-theme-perry
 =================
 
-a theme for **[hexo]**[hexo], forked from Hexo default **[light]**[light] theme.
+a theme for **[hexo]**[hexo], forked from Hexo default [light][light] theme.
 
 Install
 ==============
