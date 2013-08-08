@@ -278,13 +278,35 @@ article
         top 2px
         left 1px
 
+
+    .before-tags
+      max-width 1px
+      margin 0 auto 2em
+      a
+        &:before
+          content '\f02c'
+          top 2px
+          left 1px
     .tags
-      &:before
-        content '\f02b'
-        top 3px
-        left 2px
+      max-width 400px
+      margin 0 auto 5em 
+      text-align center
+      a
+        display inline-block
+        padding 0.2em 0.65em
+        font-size 1.2em;  
+        border-radius 16px
+        color #ddd
+
+      a:hover
+        background #f3f3f1
+        color #999
+
 
     .addthis
+      max-width 400px
+      margin 0 auto 
       margin-top 15px
+      text-align center
       iframe
         margin-top 0

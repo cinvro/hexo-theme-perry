@@ -6,36 +6,54 @@ if (page.archive){
   if (page.year) title = page.year + (page.month ? '/' + page.month : '');
   else title = __('archive_a');
 }
+
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+
+var last_year=1970,last_month=1;
+
 %>
 
-<h2 class="archive-title <% if (page.tag){ %> tag<% } else if (page.category){ %> category<% } %>"><%= title %></h2>
+
 
 <% if (pagination == 2){ %>
   <% page.posts.each(function(item){ %>
-    <%- partial('./post/title', {item: item, index: true}) %>
+    <%- partial('article', {item: item, index: true}) %>
   <% }); %>
 
   <%- partial('pagination') %>
+
 <% } else { %>
-  <div class="archive">
+
+
+<div class="archive">
     <% page.each(function(item){ %>
-      <article class="<%= item.layout %>">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+      <%
+        var year = item.date.toDate().getFullYear(),
+          month = item.date.toDate().getMonth(); 
+      %>
+
+      <% if(year!=last_year || month!=last_month){ %>
+          <div class="divider"> <%= monthNames[month] %>, <%= year%> </div>
+          <div class="clearfix""></div>
+      <% } %>
+      <%
+        last_year = year;
+        last_month = month;
+      %>    
+      <div class="archive-entry">  
+            <span class="date"><%= item.date.format(config.date_format) %></span>
             <% if (item.link){ %>
               <% if (item.title){ %>
-                <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></h1>
+                <span class="archive-link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></span>
               <% } else { %>
-                <h1 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h1>
+                <span class="archive-link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></span>
               <% } %>
             <% } else { %>
-              <h1 class="title"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h1>
+              <span class="archive-link"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></span>
             <% } %>
-          </header>
-        </div>
-      </article>
+         
+      </div>
     <% }); %>
-  </div>
-<% } %>
+</div>
+<%}%>
