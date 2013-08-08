@@ -1,7 +1,10 @@
 hexo-theme-perry
 =================
 
-a theme for **[hexo][hexo]**, forked from Hexo default [light][light] theme.
+A theme for **[hexo][hexo]**, forked from Hexo default [light][light] theme.
+
+[theme demo][demo] 
+
 
 Install
 ==============
@@ -25,3 +28,4 @@ git pull
 
 [hexo]: https://github.com/tommy351/hexo
 [light]: https://github.com/tommy351/hexo-theme-light
+[demo]: http://cinvro.com/perry-demo/
