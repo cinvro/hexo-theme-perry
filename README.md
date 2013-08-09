@@ -6,16 +6,8 @@ A theme for **[hexo][hexo]**, forked from Hexo default [light][light] theme.
 [theme demo][demo] 
 
 
-
-
-
 ![pic][pic]
 
-
-*Note:*
-
-Due to the subdirectory bug of Hexo, the *archive* page of this theme cannot be reached in the demo site. Click [here][archive]
-to demo the archive page.
 
 
 Install
