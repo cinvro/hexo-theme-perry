@@ -45,9 +45,9 @@ var last_year=1970,last_month=1;
             <span class="date"><%= item.date.format(config.date_format) %></span>
             <% if (item.link){ %>
               <% if (item.title){ %>
-                <span class="archive-link"><a href="<%- item.link %>" target="_blank"><%= item.title %></a></span>
+                <span class="archive-link"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></span>
               <% } else { %>
-                <span class="archive-link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></span>
+                <span class="archive-link"><a href="<%- config.root %><%- item.path %>"><%= item.link %></a></span>
               <% } %>
             <% } else { %>
               <span class="archive-link"><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></span>

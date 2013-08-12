@@ -6,29 +6,46 @@
 
 
   
-
 .archive
   width 600px
   margin 3em auto
   text-align left
   margin-bottom 50px
+  @media screen and (max-width: 480px)
+    max-width 80%
+  @media screen and (max-width: 1024px)
+    max-width 80%   
   article
     box-shadow none
     .post-content
       margin-bottom 0
-
   .archive-entry
-    padding-bottom 1.8em    
+    padding-bottom 1em
+ 
+    
 
 
   .date
     width 20%
-    margin-right 3em
+    margin-right 1em
     float left
+    text-align left
     color #999
+    display block 
+    clear left
+    @media screen and (max-width: 480px)
+      float none 
+      width 80%
   .archive-link
     width 60%
     float left
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis  
+    display block 
+    clear right 
+    @media screen and (max-width: 480px)
+      width 80%
     a 
       color #333
     a:hover
