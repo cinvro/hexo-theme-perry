@@ -32,6 +32,6 @@ git pull
 
 [hexo]: https://github.com/tommy351/hexo
 [light]: https://github.com/tommy351/hexo-theme-light
-[demo]: http://cinvro.com/
+[demo]: http://cinvro.com/perry-demo/
 [archive]: http://cinvro.com/perry-demo/archives
 [pic]: http://cinvro.com/pic/perry.png
